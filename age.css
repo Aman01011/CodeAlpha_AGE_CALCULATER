@@ -1,0 +1,51 @@
+
+.outbox{
+    border-radius: 30px;
+    background-image: url('/39b4e4880c48953374cb8f552d840827.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:  10px 10px 10px 10px rgba(93, 81, 81, 0.3); 
+    margin: 5% auto;
+    height: 650px;
+    width: 600px;
+    text-align: center;
+    font-size: 20px;
+}
+.outbox h1{
+ padding-top: 60px;
+}
+.outbox h2{
+    padding-top: 30px;
+   }
+
+.box input{
+    width: 300px;
+    height: 65px;
+    font-size: 30px;
+    padding: 0 30px 0 30px;
+    border: none; 
+    background-color: rgba(44, 41, 41, 0.3); 
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.box button{
+    height: 55px;
+    width: 200px;
+    margin-top: 60px;
+    font-size: 30px;
+    background-color: rgba(44, 41, 41, 0.3); 
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    
+}
+.box button:hover{
+    border: 2px solid black;
+}
+#output{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 60px 10px auto 10px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>age calculater </title>
+    <link rel="stylesheet" href="age.css">
+</head>
+
+<body>
+    <div class="outbox">
+        <h1> AGE CALCULATER</h1>
+        <h2>Enter Your BirthDate</h2>
+        <div class="box">
+            <input type="date" id="date"><br>
+                <button onclick="calc()">Enter</button>
+        </div>
+        <p id="output"></p>
+        
+
+    </div>
+    <h3>made by aman maurya </h3>
+    
+    <script>
+        let userInput = document.getElementById("date");
+        userInput.max = new Date().toISOString().split("T")[0];
+        let result = document.getElementById("output");
+
+        function calc() {
+            let birthdayDate = new Date(userInput.value);
+
+            let d1 = birthdayDate.getDate();
+            let m1 = birthdayDate.getMonth() + 1;
+            let y1 = birthdayDate.getFullYear();
+
+            let today = new Date();
+
+            let d2 = today.getDate();
+            let m2 = today.getMonth() + 1;
+            let y2 = today.getFullYear();
+
+            let d3, m3, y3;
+
+            y3 = y2 - y1;
+
+            if (m2 >= m1) {
+                m3 = m2 - m1;
+            }
+            else {
+                y3--;
+                m3 = 12 + 2 - m1;
+            }
+
+            if (d2 >= d1) {
+                d3 = d2 - d1;
+            }
+            else {
+                m3--;
+                d3 = GetDayInMonth(y1, 1) + d2 - d1;
+            }
+            if (m3 < 0) {
+                m3 = 11;
+                y3--;
+            }
+            // console.log(result)
+
+            output.innerHTML = `Mr. / Miss. , Now You Are <br> ${y3}  years,  ${m3}   months,  ${d3}  days old.`;
+
+        }
+
+        function GetDayInMonth(year, month) {
+        return new Date(year, month, 0).getDate();
+        }
+
+    </script>
+</body>
+
+</html>
